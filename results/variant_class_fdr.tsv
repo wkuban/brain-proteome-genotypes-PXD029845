@@ -1,0 +1,7 @@
+min. PSM probability	target variant peptides	decoy variant peptides	class FDR (%)
+0.5	3873	1409	36.4
+0.9	2172	243	11.2
+0.99	1670	40	2.4
+0.995	1563	18	1.2
+0.999	1383	2	0.1
+0.9967	1513	15	1.0
