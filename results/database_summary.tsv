@@ -1,0 +1,11 @@
+date	2026-11-25
+humsavar	Release:     2026_04 of 04-Nov-2026
+reference_proteins	20429
+variant_entries	84003
+contaminants	381
+decoys	104813
+total_entries	209626
+residues_reference	11417710
+residues_variants	3282668
+fasta_sha1	d08575b416f1ffbe195823fe136ee6e2a2382d88
+fasta_mb	55.3

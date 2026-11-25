@@ -1,0 +1,10 @@
+suicide - control, unadjusted (log2)	-0.333
+p, unadjusted (Welch)	0.011
+suicide - control, adjusted for cluster (log2)	-0.133
+p, adjusted	0.007
+low cluster among suicide	12/23
+low cluster among controls	3/13
+Fisher p, cluster vs group	0.159
+variance of GSTT1 explained by cluster (R2)	0.87
+p, suicide vs control within low cluster	0.24
+p, suicide vs control within high cluster	0.01

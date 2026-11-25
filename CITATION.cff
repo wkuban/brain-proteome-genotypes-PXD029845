@@ -1,0 +1,31 @@
+cff-version: 1.2.0
+message: "If you use this code or these results, please cite this repository."
+title: "Reading donor genotypes from a public brain proteome: open re-analysis of PXD029845"
+type: software
+authors:
+  - family-names: Kuban
+    given-names: Wojciech
+    affiliation: "Maj Institute of Pharmacology, Polish Academy of Sciences, Kraków, Poland"
+license: MIT
+date-released: 2026-11-25
+version: 0.1.0
+keywords:
+  - proteomics
+  - proteogenomics
+  - post-mortem brain
+  - suicide
+  - ALDH2
+  - GSTT1
+  - TMT
+  - FragPipe
+references:
+  - type: article
+    title: "Proteomic profiling of postmortem prefrontal cortex tissue of suicide completers"
+    authors:
+      - family-names: Kim
+        given-names: Min Ji
+    journal: "Translational Psychiatry"
+    volume: 12
+    start: 142
+    year: 2022
+    doi: 10.1038/s41398-022-01896-z
