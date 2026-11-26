@@ -1,18 +1,19 @@
+# Versions used to execute the notebooks in this repository (see results/software_versions.tsv)
 name: mosaic-reanalysis
 channels:
   - conda-forge
 dependencies:
-  - python=3.11
+  - python=3.10
+  - numpy=2.2.6
+  - pandas=2.3.3
+  - scipy=1.15.3
+  - statsmodels=0.15.0
+  - matplotlib=3.10.9
+  - openpyxl=3.1.5
+  - requests=2.34.2
+  - tqdm=4.70.1
+  - psutil=7.2.2
+  - nbformat=5.11.1
+  - nbclient=0.11.0
+  - ipykernel=7.3.0
   - jupyterlab
-  - ipywidgets
-  - numpy
-  - pandas
-  - scipy
-  - statsmodels
-  - matplotlib
-  - requests
-  - tqdm
-  - psutil
-  - openpyxl
-  - pyteomics
-  - nbformat

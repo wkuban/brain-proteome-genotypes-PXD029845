@@ -1,7 +1,8 @@
 @echo off
 setlocal
 cd /d "%~dp0"
-set FP=C:\FragPipe\FragPipe-24.0
+if not defined FRAGPIPE_HOME set FRAGPIPE_HOME=C:\FragPipe\FragPipe-24.0
+set FP=%FRAGPIPE_HOME%
 set JAVA_HOME=%FP%\jre
 set OUT=results_large\search_SET_1
 if not exist "%OUT%" mkdir "%OUT%"

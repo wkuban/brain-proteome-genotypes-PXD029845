@@ -1,0 +1,9 @@
+{
+  "os": "Windows 10",
+  "machine": "AMD64",
+  "physical_cores": 14,
+  "logical_cores": 20,
+  "ram_gb": 34.0,
+  "python": "3.10.22",
+  "project_disk_free_gb": 138
+}

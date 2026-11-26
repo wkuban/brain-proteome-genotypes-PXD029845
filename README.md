@@ -36,6 +36,11 @@ Carriers of ALDH2\*2 have a markedly lower ALDH2 level on peptides that do not c
 
 ![Models](results/fig_models_with_covariates.png)
 
+**RNA and protein do not tell the same story across cohorts.**
+Gene by gene, the suicide-control difference at the protein level (this re-analysis) is unrelated to the difference at the RNA level in an independent RNA-seq study of the same region (GSE101521): Spearman rho about -0.05 over 8,073 genes, and genes significant in both layers agree in direction no more often than chance.
+
+![RNA vs protein](results/fig_rna_vs_protein.png)
+
 **The re-analysis reproduces the original one.** 93% of the genes of the original analysis are recovered; donor-level quantities agree (median per-gene correlation 0.75).
 
 ![QC](results/fig_qc_agreement.png)
@@ -63,21 +68,26 @@ Carriers of ALDH2\*2 have a markedly lower ALDH2 level on peptides that do not c
 | `07_GSTT1_deletion_vs_reported_marker` | GSTT1 bimodality, peptide-level consistency, group comparison |
 | `08_variant_peptides_proteome_wide` | class-specific FDR, mass ambiguity, carrier patterns against an empirical null, comparison with population allele frequencies, cytochrome panel |
 | `09_models_with_covariates_and_inferred_genotype` | principal components, group comparison with sex and TMT set, permutation test, protein level by inferred genotype |
+| `10_rna_vs_protein` | protein-level differences against RNA-level differences from an independent RNA-seq cohort (GSE101521) |
 
 Search: FragPipe 24.0 (MSFragger 4.4.1, MSBooster, Percolator, Philosopher 5.1.3, IonQuant 1.11.20, TMT-Integrator 6.1.3), stock `TMT10` workflow with the database of notebook 03 and the pooled channel as reference. Settings: `config/MOSAIC_TMT10_variants.workflow`.
-Run time on a desktop PC (Intel i5-13500, 32 GB RAM): 2 h 26 min for all 96 files, plus 28 min for quantification.
 
 ## Reproduce
 
 ```
-conda env create -f environment.yml
+conda env create -f environment.yml      # or: pip install -r requirements.txt
 conda activate mosaic-reanalysis
 jupyter lab                      # run notebooks 00-04
 RUN_SEARCH_ALL_SETS.bat          # FragPipe, headless (Windows)
-jupyter lab                      # run notebooks 05-09
+jupyter lab                      # run notebooks 05-10
 ```
 
-Paths with spaces break some FragPipe tools; keep the project in a folder such as `C:\MOSAIC_reanaliza_PXD029845`. About 300 GB of free disk space is needed.
+- **Versions.** Package versions are pinned in `environment.yml` and `requirements.txt`; all software versions, including the FragPipe tools, are listed in `results/software_versions.tsv`.
+- **Database.** Built from UniProt release 2026_04 (Swiss-Prot FASTA and `humsavar`). UniProt serves only its current release at the download addresses, so a later run of notebook 03 gives a slightly different database. The FASTA used here is identified by its SHA-1 in `results/database_summary.tsv`; rebuilding it from the same release reproduces that checksum.
+- **Locations.** Notebooks find the project folder themselves. The FragPipe folder is taken from the environment variable `FRAGPIPE_HOME` (default `C:\FragPipe\FragPipe-24.0`). Paths with spaces break some FragPipe tools.
+- **Where things ran.** The search ran on a Windows desktop (Intel i5-13500, 32 GB RAM): 2 h 26 min for all 96 files plus 28 min for quantification. The notebooks were developed and first executed on Linux (Python 3.10.12) and then executed again from scratch on the Windows machine (Python 3.10.22, `results/environment_notebooks.json`). The two runs agree: all result tables are identical up to floating-point rounding (largest relative difference 2e-14) and the rebuilt FASTA has the same SHA-1. None of the notebooks needs more than 4 GB of RAM.
+- **Without the raw data.** Notebooks 02, 03 and 10 run from public tables only (10 also uses one result table of notebook 09). Notebooks 05-09 need the search output (about 15 GB), which is re-created by the search; their results are stored in `results/`.
+- About 300 GB of free disk space is needed for the raw files and the search.
 
 ## Layout
 
