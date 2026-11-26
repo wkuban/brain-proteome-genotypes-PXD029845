@@ -121,4 +121,4 @@ This repository is the complete, versioned record of the analysis: code, setting
 
 ## Context
 
-This analysis is part of the line of work behind the MOSAIC-S project (*Multi-Omic Signatures Across the prefrontal-limbic Circuit in medication-naïve Suicide*). Two of its findings motivate the design of that project: inherited variation can pass for a disease signal in a small post-mortem cohort, and differences seen at the RNA level in one cohort do not predict differences at the protein level in another. MOSAIC-S therefore measures several molecular layers in the same donors.
+This analysis is part of the line of work behind the MOSAIC-S project (*Multi-Omic Signatures Across the prefrontal-limbic Circuit in medication-naïve Suicide*). Two of its findings motivate the design of that project: inherited variation can pass for a disease signal in a small post-mortem cohort, and differences seen at the RNA level in one cohort do not predict differences at the protein level in another. MOSAIC-S therefore measures genotype, transcriptome and proteome in the same donors.
