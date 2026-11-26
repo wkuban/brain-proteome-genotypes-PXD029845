@@ -43,7 +43,7 @@ Gene by gene, the suicide-control difference at the protein level (this re-analy
 
 ![RNA vs protein](results/fig_rna_vs_protein.png)
 
-**The re-analysis reproduces the original one.** 93% of the genes of the original analysis are recovered; donor-level quantities agree (median per-gene correlation 0.75).
+**The re-analysis reproduces the original one.** It quantifies 10,236 genes and recovers 93% of the genes of the original analysis; donor-level quantities agree (median per-gene correlation 0.75).
 
 ![QC](results/fig_qc_agreement.png)
 
