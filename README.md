@@ -1,5 +1,7 @@
 # Reading donor genotypes from a public brain proteome
 
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.24572488.svg)](https://doi.org/10.5281/zenodo.24572488)
+
 Open re-analysis of the post-mortem prefrontal cortex proteome of suicide decedents and controls (Kim et al. 2022, PRIDE **PXD029845**), from raw spectra to figures.
 
 ## Background
@@ -117,7 +119,7 @@ Code is released under the MIT Licence (`LICENSE`). The public dataset re-analys
 
 ## Status and citation
 
-This repository is the complete, versioned record of the analysis: code, settings, software versions and result tables. A manuscript based on it is planned. Until it is published, please cite the repository itself (`CITATION.cff`).
+This repository is the complete, versioned record of the analysis: code, settings, software versions and result tables. A manuscript based on it is planned. Until it is published, please cite the archived repository (`CITATION.cff`): https://doi.org/10.5281/zenodo.24572488 (this DOI always resolves to the latest version).
 
 ## Context
 

@@ -8,6 +8,7 @@ authors:
     affiliation: "Maj Institute of Pharmacology, Polish Academy of Sciences, Kraków, Poland"
 license: MIT
 repository-code: "https://github.com/wkuban/brain-proteome-genotypes-PXD029845"
+doi: 10.5281/zenodo.24572488
 date-released: 2026-11-26
 version: 0.1.0
 keywords:
