@@ -2,14 +2,16 @@
 
 Open re-analysis of the post-mortem prefrontal cortex proteome of suicide decedents and controls (Kim et al. 2022, PRIDE **PXD029845**), from raw spectra to figures.
 
-Preliminary work for the MOSAIC-S project (*Multi-Omic Signatures Across the prefrontal–limbic Circuit in medication-naïve Suicide*).
+## Background
 
-## Why
+Post-mortem proteomic studies of suicide rely on small cohorts. In such cohorts, germline variation that changes the abundance or the sequence of a protein is unlikely to be balanced between groups, and an inherited difference can be mistaken for a disease-related change. Genotype data are rarely available for brain-bank cohorts, so this source of confounding usually remains unexamined.
 
-Proteomic studies of suicide compare small groups of donors. Any inherited difference between donors that happens to be unevenly distributed between the groups can look like a disease marker. This repository shows, on public data, that
+## Aims
 
-1. common germline variants can be read directly from a bulk brain proteome, donor by donor, and
-2. one protein reported as a potential suicide marker (GSTT1) varies between donors mainly because of a common gene deletion.
+This repository re-analyses a public TMT dataset from the raw spectra and addresses two questions:
+
+1. Can common germline coding variants be assigned to individual donors from a bulk brain proteome, with error control specific to variant peptides?
+2. How much of the reported suicide vs control difference in GSTT1, proposed as a candidate marker, is accounted for by the common *GSTT1* gene deletion?
 
 ## Main results
 
@@ -22,7 +24,7 @@ The variant peptide is identified with a complete b- and y-ion series, and the r
 
 ![ALDH2 variant spectrum](results/fig_ALDH2_variant_spectrum.png)
 
-**GSTT1.** Abundance is bimodal and all GSTT1 peptides shift together, as expected for the common gene deletion. The cluster explains 87% of the variance between donors and 60% of the reported suicide–control difference.
+**GSTT1.** Abundance is bimodal and all GSTT1 peptides shift together, as expected for the common gene deletion. The cluster explains 87% of the variance between donors and 60% of the reported suicide vs control difference.
 
 ![GSTT1](results/fig_GSTT1_deletion.png)
 
@@ -107,12 +109,16 @@ jupyter lab                      # run notebooks 05-10
 
 ## Authors
 
-Wojciech Kuban — Maj Institute of Pharmacology, Polish Academy of Sciences, Kraków.
+Wojciech Kuban, Maj Institute of Pharmacology, Polish Academy of Sciences, Kraków.
 
 ## Licence
 
 Code is released under the MIT Licence (`LICENSE`). The public dataset re-analysed here remains under the terms set by its original depositors and must be cited directly (Kim et al. 2022; PRIDE PXD029845).
 
-## Citation
+## Status and citation
 
-See `CITATION.cff`.
+This repository is the complete, versioned record of the analysis: code, settings, software versions and result tables. A manuscript based on it is planned. Until it is published, please cite the repository itself (`CITATION.cff`).
+
+## Context
+
+The analysis was developed as preparatory work for the MOSAIC-S project (*Multi-Omic Signatures Across the prefrontal-limbic Circuit in medication-naïve Suicide*).
